@@ -1,1 +1,2 @@
-git@github.com:mogwai/mogwai.github.io.git
+#!/bin/bash
+git subtree push --prefix build origin gh-pages
