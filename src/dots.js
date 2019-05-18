@@ -1,4 +1,7 @@
+import { isMobile } from "./ismobile";
+
 export default function draw() {
+  if (isMobile) return;
   const NUM_CIRCLES = 200;
   const LINE_COLOUR = "#66FFFF";
   const MAX_LINE_DISTANCE = 100;
