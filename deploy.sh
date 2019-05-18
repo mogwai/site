@@ -1,2 +1,3 @@
 #!/bin/bash
-git subtree push --prefix build origin gh-pages
+yarn build
+git subtree push --prefix build origin master
