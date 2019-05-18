@@ -1,0 +1,54 @@
+.App {
+  height: 100vh;
+  background-color: #222;
+  flex-direction: column;
+
+  justify-content: center;
+  align-items: center;
+  display: flex;
+}
+
+.App-header {
+  text-align: center;
+  height: fit-content;
+  z-index: 1;
+}
+
+.sm-icons-container {
+  display: flex;
+  justify-content: center;
+}
+
+.sm-icons-container > a > img {
+  width: 40px;
+  height: 40px;
+  padding-left: 3px;
+  padding-right: 3px;
+}
+
+.App-title {
+  font-size: 1.5em;
+}
+
+.App-intro {
+  font-size: large;
+}
+
+.profileImage {
+  border-radius: 50%;
+  width: 200px;
+  height: 200px;
+}
+
+.projectPreviews {
+  display: flex;
+  position: absolute;
+  z-index: 3;
+  background-color: white;
+  justify-content: space-around;
+  flex-wrap: wrap;
+}
+
+canvas {
+  position: absolute;
+}
