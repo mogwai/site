@@ -1,7 +1,7 @@
-import { isMobile } from "./ismobile";
+import * as mobile from 'ismobilejs'
 
 export default function draw() {
-  if (isMobile) return;
+  if(mobile.any) return;
   const NUM_CIRCLES = 200;
   const LINE_COLOUR = "#66FFFF";
   const MAX_LINE_DISTANCE = 100;
