@@ -26,11 +26,11 @@ export default function Header() {
         </a>
       </div>
       <h1 className="App-title">Harry Coultas Blum</h1>
-      <div className="links">
+      {/* <div className="links">
         <Link to="/">About</Link>
         <Link to="/projects">Projects</Link>
         <Link to="/logs">Logs</Link>
-      </div>
+      </div> */}
     </header>
   );
 }
