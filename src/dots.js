@@ -1,7 +1,8 @@
-import * as mobile from 'ismobilejs'
+import * as mobile from "ismobilejs";
+import { formatTestResults } from "@jest/test-result";
 
 export default function draw() {
-  if(mobile.any) return;
+  if (mobile.any) return;
   const NUM_CIRCLES = 200;
   const LINE_COLOUR = "#66FFFF";
   const MAX_LINE_DISTANCE = 100;
@@ -40,8 +41,8 @@ export default function draw() {
   }
 
   function animate(circles) {
+    const now = Date.now();
     context.clearRect(0, 0, canvas.width, canvas.height);
-
     for (let i = 0; i < circles.length; i++) {
       const circle = circles[i];
       circle.move(context);
@@ -56,10 +57,18 @@ export default function draw() {
         }
       }
     }
-    // request new frame
-    requestAnimationFrame(function() {
-      animate(circles);
-    });
+    const frameTime = (1 / 10) - (Date.now() - now);
+    if (frameTime <= 0) {
+      requestAnimationFrame(function() {
+        animate(circles);
+      });
+    } else {
+      setTimeout(() => {
+        requestAnimationFrame(function() {
+          animate(circles);
+        });
+      }, frameTime);
+    }
   }
 
   function siphonLife(circle, othercircle) {
