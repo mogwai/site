@@ -5,6 +5,7 @@ import draw from "./dots";
 import Header from "./Header";
 import Logs from "./Logs";
 import About from "./About";
+import Sawce from "./Sawce";
 
 class App extends React.Component {
   componentDidMount() {
@@ -18,6 +19,7 @@ class App extends React.Component {
         <div className="App">
           <Header />
           <Route exact path="/" component={About} />
+          <Route exact path="/sawce" component={Sawce} />
           {/* <Route path="/about" component={Projects} /> */}
           <Route path="/logs" component={Logs} />
           <Route
